@@ -2,6 +2,7 @@
   :description "shufoo-notifier"
   :dependencies [[amazonica "0.3.147"]
                  [clj-http "3.10.0"]
+                 [com.amazonaws/aws-lambda-java-core "1.2.0"]
                  [com.linecorp.bot/line-bot-api-client "3.1.0"]
                  [environ "1.1.0"]
                  [javax.xml.bind/jaxb-api "2.3.1"]

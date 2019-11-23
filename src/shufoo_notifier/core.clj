@@ -1,5 +1,6 @@
 (ns shufoo-notifier.core
-  (:gen-class)
+  (:gen-class
+   :implements [com.amazonaws.services.lambda.runtime.RequestStreamHandler])
   (:require [clj-http.client :as client]
             [clojure.string :as str]
             [clojure.tools.logging :as log]
@@ -68,4 +69,7 @@
 
 (defn -main [& args]
   (notify-new-flyers (load-config environ/env)))
+
+(defn -handleRequest [this input output ctx]
+  (-main))
 
